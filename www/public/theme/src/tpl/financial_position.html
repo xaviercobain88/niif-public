@@ -1,134 +1,218 @@
 <div ng-controller="FullcalendarCtrl">
     <div class="wrapper-md bg-light b-b">
-        <button type="button" class="btn btn-default btn-addon pull-right m-t-n-xs" ui-toggle-class="show"
-                target="#aside">
-            <i class="fa fa-bars"></i> List
-        </button>
-        <h1 class="m-n font-thin h3">Estado de Situación Financiera</h1>
+        <h1 class="m-n font-thin h2  ">Empresa La Favorita</h1>
+
+        <div class="text-center text-muted pull-right">Período: 1 de Enero de 2014 al 31 de Diciembre de 2014</div>
     </div>
-    <div class="wrapper-md">
-        <div ng-controller="AccordionDemoCtrl">
-            <accordion>
+    <tabset class="nav-tabs-alt" justified="true">
+        <tab>
+            <tab-heading>
+                <i class="glyphicon glyphicon-list-alt text-md text-muted wrapper-sm"></i>Situación Financiera
+            </tab-heading>
+            <div class="wrapper-md">
 
-                <accordion-group class="list-group gutter list-group-lg list-group-sp  custom_accordion_group">
-                    <accordion-heading>
+                <div ng-controller="AccordionDemoCtrl">
+                    <div class="row m-b-md">
+                        <button type="button" class="btn btn-default  pull-left m-t-n-xs  m-l-md active"
+                                ui-toggle-class="show"
+                                target="#aside">
+                            <i class="fa  fa-edit"></i> Edición
+                        </button>
+                        <button type="button" class="btn btn-default  pull-left m-t-n-xs  m-l-md"
+                                ui-toggle-class="show"
+                                target="#aside">
+                            <i class="fa fa-caret-square-o-right"></i> Vista Previa
+                        </button>
+                        <button type="button" class="btn btn-default  pull-left m-t-n-xs  m-l-md"
+                                ui-toggle-class="show"
+                                target="#aside">
+                            <i class="fa fa-bar-chart-o"></i> Cuadro Estadístico
+                        </button>
+                        <div class="pull-right">Exportar a
+                            <button type="button" class="btn btn-default   m-t-n-xs  m-r-sm"
+                                    ui-toggle-class="show"
+                                    target="#aside">
+                                <i class="fa fa-file-code-o"></i> XML
+                            </button>
+                            <button type="button" class="btn btn-default   m-t-n-xs  m-r-sm"
+                                    ui-toggle-class="show"
+                                    target="#aside">
+                                <i class="fa  fa-file-pdf-o"></i> PDF
+                            </button>
+                        </div>
+                    </div>
 
-                        <div class="list-group-item bg-success">
+                    <accordion>
+
+                        <accordion-group class="list-group gutter list-group-lg list-group-sp  custom_accordion_group">
+                            <accordion-heading>
+
+                                <div class="list-group-item bg-success">
                              <span class="pull-right h4">
                                 123 000 125.00
                               </span>
 
-                            <div class="clear h4">
-                                Activos
-                            </div>
-                        </div>
-
-                    </accordion-heading>
-                    <div class="hbox hbox-auto-xs bg-light "
-   ng-controller="NoteCtrl">
-                        <!-- column -->
-                        <div class="col w-lg lt b-r">
-                            <div class="vbox">
-                                <div class="wrapper">
-                                    <a href class="pull-right btn btn-sm btn-info m-t-n-xs"
-                                       ng-click="createNote()">New</a>
-
-                                    <div class="h4">Notes</div>
-                                </div>
-                                <div class="wrapper b-t m-t-xxs">
-                                    <div class="input-group">
-                                        <span class="input-group-addon input-sm"><i class="fa fa-search"></i></span>
-                                        <input type="text" class="form-control input-sm" placeholder="search"
-                                               ng-model="query">
+                                    <div class="clear h4">
+                                        Activos
                                     </div>
                                 </div>
-                                <div class="row-row">
-                                    <div class="cell scrollable hover">
-                                        <div class="cell-inner">
-                                            <div class="padder">
-                                                <div class="list-group">
-                                                    <a ng-repeat="note in notes | filter:query | orderBy:'date':true"
-                                                       class="list-group-item b-l-{{note.color}} b-l-3x hover-anchor"
-                                                       ng-class="{'hover': note.selected }" ng-click="selectNote(note)">
-                                                        <span ng-click='deleteNote(note)'
-                                                              class="pull-right text-muted hover-action"><i
-                                                                class="fa fa-times"></i></span>
-                                                        <span class="block text-ellipsis">{{ note.content ? note.content : 'Empty note' }}</span>
-                                                        <small class="text-muted">{{ note.date | fromNow }}</small>
-                                                    </a>
+
+                            </accordion-heading>
+                            <div class="hbox  ng-scope">
+                                <div class="col col w-md bg-white dk b-r ">
+                                    <div class="panel no-border">
+                                        <ul class="list-group list-group-lg m-b-none">
+                                            <li class="list-group-item less-padding bg-light">
+                                                <span class="pull-right   inline ">15000&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-right"></i></span>
+                                                <a href>Activo Fijo</a>
+
+                                            </li>
+                                            <li class="list-group-item less-padding">
+                                                <span class="pull-right   inline ">15000&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-right"></i></span>
+                                                <a href>Activo Fijo</a>
+
+                                            </li>
+                                            <li class="list-group-item less-padding">
+                                                <span class="pull-right   inline ">15000&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-right"></i></span>
+                                                <a href>Activo Fijo</a>
+
+                                            </li>
+                                            <li class="list-group-item less-padding">
+                                                <span class="pull-right   inline ">15000&nbsp;&nbsp;&nbsp;<i class="fa fa-caret-right"></i></span>
+                                                <a href>Activo Fijo</a>
+
+                                            </li>
+
+                                        </ul>
+
+                                    </div>
+                                </div>
+                                <div class="col">
+                                    <div class="panel no-border">
+                                        <form>
+                                        <ul class="list-group list-group-lg m-b-none">
+                                            <li class="list-group-item less-padding clearfix">
+                                                <div class="form-group">
+                                                    <label class="col-lg-6 control-label">Activo Fijo Nivel 3</label>
+                                                    <div class="col-lg-6 ">
+                                                        <div class="input-group ">
+                                                            <span class="input-group-addon">$</span>
+                                                            <input type="text" class="form-control input-sm" >
+                                                        </div>
+                                                    </div>
                                                 </div>
-                                            </div>
-                                        </div>
+
+                                            </li>
+                                            <li class="list-group-item less-padding clearfix">
+                                                <div class="form-group">
+                                                    <label class="col-lg-6 control-label">Activo Fijo Nivel 3</label>
+                                                    <div class="col-lg-6 ">
+                                                        <div class="input-group ">
+                                                            <span class="input-group-addon">$</span>
+                                                            <input type="text" class="form-control input-sm" >
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </li>
+                                            <li class="list-group-item less-padding clearfix">
+                                                <div class="form-group">
+                                                    <label class="col-lg-6 control-label">Activo Fijo Nivel 3</label>
+                                                    <div class="col-lg-6 ">
+                                                        <div class="input-group ">
+                                                            <span class="input-group-addon">$</span>
+                                                            <input type="text" class="form-control input-sm" >
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </li>
+                                            <li class="list-group-item less-padding clearfix">
+                                                <div class="form-group">
+                                                    <label class="col-lg-6 control-label">Activo Fijo Nivel 3</label>
+                                                    <div class="col-lg-6 ">
+                                                        <div class="input-group ">
+                                                            <span class="input-group-addon">$</span>
+                                                            <input type="text" class="form-control input-sm" >
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </li>
+                                            <li class="list-group-item less-padding clearfix">
+                                                <div class="form-group">
+                                                    <label class="col-lg-6 control-label">Activo Fijo Nivel 3</label>
+                                                    <div class="col-lg-6 ">
+                                                        <div class="input-group ">
+                                                            <span class="input-group-addon">$</span>
+                                                            <input type="text" class="form-control input-sm" >
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+                                            </li>
+
+                                        </ul>
+                                        </form>
+
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <!-- /column -->
 
-                        <!-- column -->
-                        <div class="col">
-                            <div class="vbox">
-                                <div class="wrapper bg-light lt b-b">
-                                    <span class="text-muted">Created on:</span> <span>{{ note.date  | date:'MMM-dd-yyyy H:mm' }}</span>
+                        </accordion-group>
+                        <accordion-group class="list-group gutter list-group-lg list-group-sp  custom_accordion_group">
+                            <accordion-heading>
 
-                                    <div class="m-l inline dropdown">
-                                        <a class="dropdown-toggle v-middle pos-rlt inline bg-{{note.color}}"
-                                           style="width:16px;height:16px;top:-2px"></a>
-
-                                        <div class="dropdown-menu animated fadeInUp w wrapper">
-                                            <a ng-repeat="color in colors" class="inline m-xs bg-{{color}}"
-                                               style="width:18px;height:18px" ng-click=" note.color = color "></a>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="row-row">
-                                    <div class="cell">
-                                        <div class="cell-inner">
-                                            <textarea class="form-control no-radius no-border no-bg wrapper-lg text-md"
-                                                      style="height:100%;" ng-model="note.content">
-                                            </textarea>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- /column -->
-                    </div>
-                </accordion-group>
-                <accordion-group class="list-group gutter list-group-lg list-group-sp  custom_accordion_group">
-                    <accordion-heading>
-
-                        <div class="list-group-item bg-danger">
+                                <div class="list-group-item bg-danger">
                              <span class="pull-right h4">
                                 23 000 125.00
                               </span>
 
-                            <div class="clear h4">
-                                Pasivos
-                            </div>
-                        </div>
+                                    <div class="clear h4">
+                                        Pasivos
+                                    </div>
+                                </div>
 
-                    </accordion-heading>
-                    This is just some content to illustrate fancy headings.
-                </accordion-group>
-                <accordion-group class="list-group gutter list-group-lg list-group-sp  custom_accordion_group">
-                    <accordion-heading>
+                            </accordion-heading>
+                            This is just some content to illustrate fancy headings.
+                        </accordion-group>
+                        <accordion-group class="list-group gutter list-group-lg list-group-sp  custom_accordion_group">
+                            <accordion-heading>
 
-                        <div class="list-group-item bg-info">
+                                <div class="list-group-item bg-info">
                              <span class="pull-right h4">
                                 100 000 000.00
                               </span>
 
-                            <div class="clear h4">
-                                Patrimonio
-                            </div>
-                        </div>
+                                    <div class="clear h4">
+                                        Patrimonio
+                                    </div>
+                                </div>
 
-                    </accordion-heading>
-                    This is just some content to illustrate fancy headings.
-                </accordion-group>
-            </accordion>
+                            </accordion-heading>
+                            This is just some content to illustrate fancy headings.
+                        </accordion-group>
+                    </accordion>
 
-        </div>
-    </div>
+                </div>
+            </div>
+        </tab>
+        <tab>
+            <tab-heading>
+                <i class="glyphicon glyphicon-list-alt text-md text-muted wrapper-sm"></i>Estado de Resultados
+            </tab-heading>
+            <div class="wrapper-md">
+            </div>
+        </tab>
+        <tab>
+            <tab-heading>
+                <i class="glyphicon glyphicon-list-alt text-md text-muted wrapper-sm"></i>Est. Flujo del Efectivo
+            </tab-heading>
+        </tab>
+        <tab>
+            <tab-heading>
+                <i class="glyphicon glyphicon-list-alt text-md text-muted wrapper-sm"></i>Est. Cambios en el Patrimonio
+            </tab-heading>
+        </tab>
+    </tabset>
 </div>
