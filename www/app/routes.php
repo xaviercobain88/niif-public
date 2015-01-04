@@ -11,7 +11,8 @@
 |
 */
 
-Route::get('/', function()
-{
-	return View::make('hello');
-});
+Route::get('/login', 'AuthController@loginPage');
+Route::get('/signup', 'AuthController@signupPage');
+Route::post('/login_form', 'AuthController@login');
+Route::post('/signup_form', 'AuthController@signup');
+Route::get('/dashboard', "LicensedUserController@getDashboard");
